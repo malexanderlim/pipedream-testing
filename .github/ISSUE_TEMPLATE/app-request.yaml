@@ -1,0 +1,48 @@
+name: App Integration Request
+description: Request a new integration
+title: "[App Request]:"
+labels: ["app"]
+assignees: 
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please fill out this form to request a new API integration. If this doesn’t look right, choose a different type.!
+  - type: input
+    id: app_name
+    attributes:
+      label: Name of App
+      description: What is the name of the app?
+      placeholder: ex. VisualPing
+    validations:
+      required: true
+  - type: input
+    id: developer_documentation
+    attributes:
+      label: Link to Developer Documentation
+      description: Please provide a link to the developer documentation.
+      placeholder: ex. https://develop.api.visualping.io/doc.html
+    validations:
+      required: true
+  - type: dropdown
+    id: authentication_type
+    attributes:
+      label: What is the authentication type?
+      multiple: true
+      options:
+      - Key-based
+      - OAuth
+    validations:
+      required: true
+  - type: input
+    id: triggers
+    attributes:
+      label: Are there any triggers that you'd like to see for this app?
+    validations:
+      required: false
+  - type: input
+    id: actions
+    attributes:
+      label: Are there any actions that you'd like to see for this app?
+    validations:
+      required: false      
